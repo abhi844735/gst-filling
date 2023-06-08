@@ -45,5 +45,13 @@
      
      for finding the avg marks of all students 
      9. Get Request = /admin/sum = response={avgSum};
+   
+  ## Authorization & Authentication
+    1.Authentication middleware = It will check first , user is logged in or not, if user is not logged in it will give response please login again otherwise it will check for token , is token correct or not if correct than it will give permission of end points of rest full api's .
+    
+    2. Authorization middleware = It will check for role based access control , if user role is admin than only user can perfome any operation on data. otherwise it will give response access-denied.
+   
+   
+
      
      
