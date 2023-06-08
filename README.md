@@ -18,7 +18,32 @@
 ## Api Endpoints
 
      for registering a user or admin
-     1. /users/register => req.body = {name,email,role,password} , Response ={message:"user registered successfully,status:200}.
+     1. Post Request = /users/register => req.body = {name,email,role,password} , Response ={message:"user registered successfully,status:200}.
      
      for logging a user or admin
-     2. /users/login => req.body = {email,password} , Response ={message:"user logged in successfully,status:200,token:"access-token"}.
+     2. Post Request = /users/login => req.body = {email,password} , Response ={message:"user logged in successfully,status:200,token:"access-token"}.
+     
+     for uploading a excel sheet and saving data into mongoDB.
+     3. Post Request = /importFile => req.body = {excel file}, Response = {message:"imported successfully",status:200}
+     
+     for crud operations  on saved data
+     
+     for getting all the data from mongodb
+     4. Get Request = /admin/fileData = Response ={userData:[array of users data]}
+     
+     for updating any data using its id
+     5. Patch Request = /admin/update/:id = req.body = {updated data} , req.params={data._id} , response :{message:"data updated successfully"}.
+     
+     for deleting any data using its id
+     6. Delete Request = /admin/delete/:id = req.params={data._id} , response :{message:"data deleted successfully"}.
+     
+     for adding data to mongodb
+     7. Post Request = /admin/addData = req.body={data of user} , response : {message :"data has been added"};
+     
+     for finding the total sums of all students 
+     8. Get Request = /admin/sum= response={totalSum};
+     
+     for finding the avg marks of all students 
+     9. Get Request = /admin/sum = response={avgSum};
+     
+     
