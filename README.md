@@ -15,3 +15,10 @@
   6. body-parser
   7. csvtojson
 
+## Api Endpoints
+
+     for registering a user or admin
+     1. /users/register => req.body = {name,email,role,password} , Response ={message:"user registered successfully,status:200}.
+     
+     for logging a user or admin
+     2. /users/login => req.body = {email,password} , Response ={message:"user logged in successfully,status:200,token:"access-token"}.
